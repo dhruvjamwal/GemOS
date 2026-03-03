@@ -4,6 +4,20 @@ This repository contains the source code and implementations for various core op
 
 The project focuses on building foundational OS primitives from scratch, managing hardware interruptions, virtual memory, and developing a custom file system. 
 
+GemOS-Architecture/
+├── README.md
+├── src/
+│   ├── apic.c
+│   ├── boot_64.S
+│   ├── context.c
+│   ├── entry.c
+│   ├── file.c
+│   └── fs.c
+├── utils/
+│   └── mygrep.c
+└── scripts/
+    └── copy.sh
+
 ## Key Features & Implementations
 
 * Memory Management & Paging: Implemented virtual memory translation and page fault handling. The system handles demand paging and dynamic memory expansion/shrinkage using multi-level page tables.
@@ -24,3 +38,4 @@ The kernel operates in 64-bit mode and handles transitions between user space an
 ## Building and Running
 
 The project requires a cross-compiled GCC toolchain for x86_64. A `copy.sh` script is provided to streamline the deployment of the compiled `gemOS.kernel` binary into the testing container.
+
